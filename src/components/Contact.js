@@ -29,7 +29,7 @@ const Contact = () => {
   };
 
   const contacts = [
-    { icon: '📧', label: 'Email', value: 'kirubakarank1103@email.com', href: 'mailto:kirubakarank1103@email.com' },
+    { icon: '📧', label: 'Email', value: 'kirubakarank1103@gmail.com', href: 'mailto:kirubakarank1103@gmail.com' },
     { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/kirubakarank1103', href: 'https://www.linkedin.com/in/kirubakarank1103' },
     { icon: '🐙', label: 'GitHub', value: 'github.com/kirubakarank1103', href: 'https://github.com/kirubakarank1103' },
     { icon: '📱', label: 'Mobile No', value: '6383304533', href: 'tel:6383304533' },
