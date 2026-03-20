@@ -1,0 +1,217 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 245, 160, 0.1);
+  border: 1px solid rgba(0, 245, 160, 0.3);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent4);
+  margin-bottom: 28px;
+  animation: fadeUp 0.6s ease 0.1s both;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent4);
+  border-radius: 50%;
+  animation: pulse-glow 2s infinite;
+  box-shadow: 0 0 6px var(--accent4);
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.line1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 400;
+  color: var(--text2);
+  animation: fadeUp 0.6s ease 0.2s both;
+}
+
+.line2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1;
+  animation: fadeUp 0.6s ease 0.3s both;
+}
+
+.line3 {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--accent1);
+  animation: fadeUp 0.6s ease 0.4s both;
+}
+
+.hero-desc {
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text2);
+  margin-bottom: 28px;
+  animation: fadeUp 0.6s ease 0.5s both;
+}
+
+.hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+  animation: fadeUp 0.6s ease 0.6s both;
+}
+
+.stack-chip {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 5px 12px;
+  background: rgba(255, 60, 172, 0.08);
+  border: 1px solid rgba(255, 60, 172, 0.25);
+  border-radius: 4px;
+  color: var(--accent1);
+  transition: all 0.2s;
+}
+
+.stack-chip:hover {
+  background: rgba(255, 60, 172, 0.18);
+  transform: translateY(-2px);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  animation: fadeUp 0.6s ease 0.7s both;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  color: white;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s;
+  animation: pulse-glow 3s infinite;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(255, 60, 172, 0.4);
+}
+
+.btn-ghost {
+  padding: 14px 28px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent3);
+  color: var(--accent3);
+  transform: translateY(-3px);
+}
+
+.hero-socials {
+  display: flex;
+  gap: 16px;
+  animation: fadeUp 0.6s ease 0.8s both;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text2);
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.social-link:hover {
+  color: var(--text);
+  border-color: var(--accent3);
+  transform: translateY(-2px);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  z-index: 1;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.scroll-mouse {
+  width: 24px;
+  height: 38px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.scroll-wheel {
+  width: 4px;
+  height: 8px;
+  background: var(--accent3);
+  border-radius: 2px;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+.scroll-indicator span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--text2);
+  text-transform: uppercase;
+}
